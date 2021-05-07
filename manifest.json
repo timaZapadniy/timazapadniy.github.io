@@ -1,6 +1,6 @@
 {
-    "name": "zap_diller",
-    "short_name": "zap_diller",
+    "name": "zap_bonusapp",
+    "short_name": "zap_bonusapp",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
