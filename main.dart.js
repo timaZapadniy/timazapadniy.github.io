@@ -68414,7 +68414,7 @@ $S:2}
 G.adi.prototype={
 $2:function(a,b){var s,r,q,p,o=null,n=t.w,m=a.w(n).f.a.a>750?a.w(n).f.a.a*0.6:a.w(n).f.a.a*0.8,l=this.a.d[b],k=l.a,j=l.b,i=l.c
 l=l.d
-s=a.w(n).f.a.a>1200?a.w(n).f.a.b*0.08:a.w(n).f.a.b*0.18
+s=a.w(n).f.a.a>1200?a.w(n).f.a.b*0.08:a.w(n).f.a.b*0.1
 r=i==="\u0417\u0430\u0440\u0435\u0433\u0438\u0441\u0442\u0440\u0438\u0440\u043e\u0432\u0430\u043d"?C.kB:C.RB
 q=K.es(2)
 p=a.w(n).f.a.a>1200?a.w(n).f.a.a*0.2:a.w(n).f.a.a*0.1
