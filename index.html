@@ -25,23 +25,33 @@
 
   <meta charset="UTF-8">
   <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
+  <meta name="description" content="Программа развития продаж">
 
   <!-- iOS meta tags & icons -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="zap_bonusapp">
+  <meta name="apple-mobile-web-app-title" content="Программа развития продаж ГЗ Металлкомплект">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
-  <title>zap_bonusapp</title>
+  <title>Программа развития продаж</title>
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" type="text/css" href="splash/style.css">
 </head>
 <body>
 
-<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-auth.js"></script>
-<script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-storage.js"></script>
+<script type="text/javascript">
+  let useHtml = true;
+  if(useHtml) {
+    window.flutterWebRenderer = "html";
+  } else {
+    window.flutterWebRenderer = "canvaskit";
+  }
+</script>
+<script src="main.dart.js" type="application/javascript"></script>
 
 
 <script type="text/javascript" src="config.js"></script>
@@ -49,7 +59,7 @@
        application. For more information, see:
        https://developers.google.com/web/fundamentals/primers/service-workers -->
   <script>
-    var serviceWorkerVersion = null;
+    var serviceWorkerVersion = '3983496805';
     var scriptLoaded = false;
     function loadMainDartJs() {
       if (scriptLoaded) {

@@ -3,30 +3,36 @@ const MANIFEST = 'flutter-app-manifest';
 const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
-  "assets/AssetManifest.json": "023e8a5df38c7682b7f0c98985fb6db6",
+  "assets/AssetManifest.json": "2dbb6e5293386fb22a15d854eae6a10e",
 "assets/assets/back.png": "636c1b099a124ef8e587a1d05dc45ac1",
 "assets/assets/back1.png": "b37394ecaa496f045a71658efc524e49",
+"assets/assets/card.jpg": "8721aada8b66bb3b70afb2bb3ad55287",
 "assets/assets/logo.jpg": "1d1a23ac6d11f14b8872ba92bf78811d",
 "assets/assets/mini_logo.jpg": "28bcfe97ebefa88ae5a7a2fba1a90e88",
-"assets/assets/splash.png": "4c925ea28a3e9d8edcaadb37e2844e67",
+"assets/assets/phone.jpg": "5a4a37d02d6111ca745408e48cccec41",
+"assets/assets/qiwi.png": "66611d9415287631af64dc04cb5e8d79",
+"assets/assets/splash.jpg": "3033d64562dd9ee6824447dbfadaf1f6",
+"assets/assets/yad.png": "14b8ef6dc4435dbe1be40ed540c32e4b",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
-"assets/fonts/MaterialIcons-Regular.otf": "1288c9e28052e028aba623321f7826ac",
-"assets/NOTICES": "e6059170d2c489e9a713010a55f52e52",
+"assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
+"assets/NOTICES": "e1e7ed485e6d418d4f4501cf489f9391",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
+"assets/packages/fluttertoast/assets/toastify.css": "a85675050054f179444bc5ad70ffc635",
+"assets/packages/fluttertoast/assets/toastify.js": "e7006a0a033d834ef9414d48db3be6fc",
 "config.js": "dcec36196595da0c46c4241d7f24c5f4",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "cafc55a2eb64ff0148a49494af9b49f0",
-"/": "cafc55a2eb64ff0148a49494af9b49f0",
-"main.dart.js": "5840c308700ac99a382db89867a1e8d2",
+"index.html": "9ac211b560e979cf58310b96a5bbba2c",
+"/": "9ac211b560e979cf58310b96a5bbba2c",
+"main.dart.js": "1f644b3724d974dee8b23961669a77eb",
 "manifest.json": "213089d9d025318c4f0f32b9bb044bda",
-"splash/img/dark-1x.png": "c101e6537933d27287c009626d1e04b7",
-"splash/img/dark-2x.png": "16e46e3bedffe06ab68fd698368921fe",
-"splash/img/dark-3x.png": "fa1f13717689fb58685ec8456f241149",
-"splash/img/light-1x.png": "c101e6537933d27287c009626d1e04b7",
-"splash/img/light-2x.png": "16e46e3bedffe06ab68fd698368921fe",
-"splash/img/light-3x.png": "fa1f13717689fb58685ec8456f241149",
+"splash/img/dark-1x.png": "5fb6ac826dd3b69a4195873bd52326e2",
+"splash/img/dark-2x.png": "97b84353ed0f47e1a0e6684f4e680af8",
+"splash/img/dark-3x.png": "f182288a109636404e24c314fe2ef855",
+"splash/img/light-1x.png": "5fb6ac826dd3b69a4195873bd52326e2",
+"splash/img/light-2x.png": "97b84353ed0f47e1a0e6684f4e680af8",
+"splash/img/light-3x.png": "f182288a109636404e24c314fe2ef855",
 "splash/style.css": "3310f8170d554be3ace57bc266ea7b5c",
 "version.json": "35f8eeffc30964bc5c98f6c3faa5ec62"
 };
@@ -46,7 +52,7 @@ self.addEventListener("install", (event) => {
   return event.waitUntil(
     caches.open(TEMP).then((cache) => {
       return cache.addAll(
-        CORE.map((value) => new Request(value + '?revision=' + RESOURCES[value], {'cache': 'reload'})));
+        CORE.map((value) => new Request(value, {'cache': 'reload'})));
     })
   );
 });
