@@ -18647,7 +18647,7 @@ _.a=o},
 lM:function lM(a){this.a=a},
 yk:function yk(a,b){var _=this
 _.d=a
-_.a=_.f=_.e=null
+_.a=_.r=_.f=_.e=null
 _.b=b
 _.c=null},
 a6z:function a6z(a){this.a=a},
@@ -62242,23 +62242,25 @@ an:function(){return new B.yk(new N.bb("QR",t.A),C.k)}}
 B.yk.prototype={
 J:function(a,b){var s=this,r=null,q=E.Qq(r,L.bP("\u041e\u0442\u043c\u0435\u0442\u0438\u0442\u044c \u043f\u0440\u043e\u043f\u0443\u0441\u043a",r,r,r,r,r,r)),p=T.oI(new M.w1(s.ga0k(),s.d),5),o=s.e
 return M.a0y(q,T.hD(H.a([p,T.oI(T.dn(o!=null?L.bP("Barcode Type: "+Y.ag_(o.b)+"   Data: "+H.c(s.e.a),r,r,r,r,r,r):L.bP("Scan a code",r,r,r,r,r,r),r,r),1)],t.F),C.ab,C.a0,C.a1))},
-a0l:function(a){this.f=a
+a0l:function(a){this.r=a
 a.gNN().LG(new B.a6z(this))},
-p:function(a){var s=this.f
+p:function(a){var s=this.r
 if(s!=null)s.p(0)
 this.b0(0)}}
 B.a6z.prototype={
 $1:function(a){return this.Nb(a)},
-Nb:function(a){var s=0,r=P.U(t.H),q=this,p,o
+Nb:function(a){var s=0,r=P.U(t.H),q=this,p,o,n
 var $async$$1=P.P(function(b,c){if(b===1)return P.R(c,r)
-while(true)switch(s){case 0:o=q.a
-o.aB(new B.a6y(o,a))
-s=o.e!=null?2:3
+while(true)switch(s){case 0:n=q.a
+n.aB(new B.a6y(n,a))
+p=n.e
+s=p!=null&&p!==n.f?2:3
 break
-case 2:s=4
-return P.a3(G.ag9(P.nd("https://gzmk.ru/osno/apitest1.php?date="+new P.dr(Date.now(),!1).j(0)+"&method=getDocFromQR&code="+H.c(o.e.a))),$async$$1)
-case 4:p=c
-if(p.b===200)P.nO(B.acr(U.abo(p.e).c.a.i(0,"charset")).cD(0,p.x))
+case 2:n.f=p
+s=4
+return P.a3(G.ag9(P.nd("https://gzmk.ru/osno/apitest1.php?date="+new P.dr(Date.now(),!1).j(0)+"&method=getDocFromQR&code="+H.c(n.e.a))),$async$$1)
+case 4:o=c
+if(o.b===200)P.nO(B.acr(U.abo(o.e).c.a.i(0,"charset")).cD(0,o.x))
 else throw H.b(P.c7("Error fetching users"))
 case 3:return P.S(null,r)}})
 return P.T($async$$1,r)},
