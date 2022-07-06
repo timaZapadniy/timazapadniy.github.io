@@ -18654,8 +18654,7 @@ _.a=null
 _.b=c
 _.c=null},
 a6A:function a6A(a){this.a=a},
-a6z:function a6z(a,b){this.a=a
-this.b=b},
+a6z:function a6z(){},
 mf:function mf(){},
 S6:function S6(){},
 B_:function(a,b,c){if(a==null||!1)return a===b
@@ -62258,11 +62257,11 @@ $1:function(a){return this.Nb(a)},
 Nb:function(a){var s=0,r=P.U(t.H),q=this,p,o,n,m,l
 var $async$$1=P.P(function(b,c){if(b===1)return P.R(c,r)
 while(true)switch(s){case 0:l=q.a
-l.aB(new B.a6z(l,a))
-p=l.e
-s=p!=null&&p!==l.f?2:3
+l.e=a
+p=l.f
+s=a!==p?2:3
 break
-case 2:l.f=p
+case 2:l.f=a
 s=4
 return P.a3(G.ag7(P.nd("https://gzmk.ru/osno/apitest1.php?date="+new P.dq(Date.now(),!1).j(0)+"&method=getDocFromQR&code="+H.c(l.e.a))),$async$$1)
 case 4:o=c
@@ -62270,12 +62269,13 @@ if(o.b===200){p=o.e
 n=B.PM(U.Pz(p).c.a.i(0,"charset"))
 m=o.x
 P.nO(n.cs(0,m))
-l.y=J.b2(J.b2(C.aw.cs(0,B.PM(U.Pz(p).c.a.i(0,"charset")).cs(0,m)),0),"\u0421\u0441\u044b\u043b\u043a\u0430")}else throw H.b(P.c7("Error fetching users"))
+l.y=J.b2(J.b2(C.aw.cs(0,B.PM(U.Pz(p).c.a.i(0,"charset")).cs(0,m)),0),"\u0421\u0441\u044b\u043b\u043a\u0430")
+l.aB(new B.a6z())}else throw H.b(P.c7("Error fetching users"))
 case 3:return P.S(null,r)}})
 return P.T($async$$1,r)},
 $S:397}
 B.a6z.prototype={
-$0:function(){this.a.e=this.b},
+$0:function(){},
 $S:0}
 U.lO.prototype={
 an:function(){var s="13:00:11"
