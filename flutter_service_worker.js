@@ -4,18 +4,18 @@ const TEMP = 'flutter-temp-cache';
 const CACHE_NAME = 'flutter-app-cache';
 const RESOURCES = {
   "assets/AssetManifest.json": "2230d2c8e7fbdcacd3a5cd3ca9fb1a4f",
-"assets/assets/autos.json": "81323ff0d8b0e71a1de276f6d6ec1ddd",
-"assets/assets/tochki.json": "1a5b9f00888c1b20ad83977e045512a1",
+"assets/assets/autos.json": "2511795638567cf00c689ad467ea26b8",
+"assets/assets/tochki.json": "045af3f08e283eacbdfdede201552739",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
 "assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
-"assets/NOTICES": "3750ede81171a2f65a61b643a10da424",
+"assets/NOTICES": "17aa68a6eb69886fd083b528911a51b5",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "862a4221e002029bc93b8c7626360179",
-"/": "862a4221e002029bc93b8c7626360179",
-"main.dart.js": "ef07dd15788fd3424ce3563ef394c0f0",
+"index.html": "2050df6de55f45f2002cd1006d8052c8",
+"/": "2050df6de55f45f2002cd1006d8052c8",
+"main.dart.js": "71030a01f0fa44ee678e060d3413ddbd",
 "manifest.json": "8aadfa7ba875b097ada3d66a8f60d982",
 "version.json": "add1cca23be73ce7112de8b3e96f0928"
 };
