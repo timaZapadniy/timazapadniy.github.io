@@ -64738,7 +64738,7 @@ G.a0e.prototype={
 h1:function(){var s=0,r=P.S(t.z),q,p
 var $async$h1=P.L(function(a,b){if(a===1)return P.P(b,r)
 while(true)switch(s){case 0:s=3
-return P.O(G.afx(P.ln("https://gzmk.ru/osno/apitest.php?method=getDocsPropusk&name="+$.aq3)),$async$h1)
+return P.O(G.afx(P.ln("https://gzmk.ru/osno/apitest1.php?method=getDocsPropusk&name="+$.aq3)),$async$h1)
 case 3:p=b
 if(p.b===200){q=p
 s=1
