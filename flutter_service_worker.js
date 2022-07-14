@@ -7,24 +7,28 @@ const RESOURCES = {
 "assets/assets/autos.json": "2511795638567cf00c689ad467ea26b8",
 "assets/assets/tochki.json": "045af3f08e283eacbdfdede201552739",
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
-"assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
-"assets/NOTICES": "0fdac98f84ac6cae670b26b8f4166291",
+"assets/fonts/MaterialIcons-Regular.otf": "95db9098c58fd6db106f1116bae85a0b",
+"assets/NOTICES": "37bb619db15b8e70c1f570b8f6bd6c39",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
+"canvaskit/canvaskit.js": "c2b4e5f3d7a3d82aed024e7249a78487",
+"canvaskit/canvaskit.wasm": "4b83d89d9fecbea8ca46f2f760c5a9ba",
+"canvaskit/profiling/canvaskit.js": "ae2949af4efc61d28a4a80fffa1db900",
+"canvaskit/profiling/canvaskit.wasm": "95e736ab31147d1b2c7b25f11d4c32cd",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
+"flutter.js": "eb2682e33f25cd8f1fc59011497c35f8",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
-"index.html": "db7e3f21ae5213ee6986d0c9e0d007d6",
-"/": "db7e3f21ae5213ee6986d0c9e0d007d6",
-"main.dart.js": "efcbf64f52f36baf7fed4843e5891d8e",
+"index.html": "50d728637503318a44c02fede8310529",
+"/": "50d728637503318a44c02fede8310529",
+"main.dart.js": "b9b9ad37b732fb9f2bad5823d00bfea6",
 "manifest.json": "8aadfa7ba875b097ada3d66a8f60d982",
-"version.json": "add1cca23be73ce7112de8b3e96f0928"
+"version.json": "641dff0283759a192bd1d5044a391ff7"
 };
 
 // The application shell files that are downloaded before a service worker can
 // start.
 const CORE = [
-  "/",
-"main.dart.js",
+  "main.dart.js",
 "index.html",
 "assets/NOTICES",
 "assets/AssetManifest.json",
