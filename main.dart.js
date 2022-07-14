@@ -69160,7 +69160,7 @@ A.jE(new A.acj(),p,15,!0,o)
 m.a=""
 B.c.V(l,new A.ack(m))
 s=5
-return A.G(A.vD(A.hr("https://gzmk.ru/osno/apitest1.php?date="+new A.dq(Date.now(),!1).j(0)+"&method=checkpointOut&code="+A.e(q.f.a)+"&photo="+m.a)),$async$oL)
+return A.G(A.vD(A.hr("https://gzmk.ru/osno/apitest1.php?date="+new A.dq(Date.now(),!1).j(0)+"&method=checkpointIN&code="+A.e(q.f.a)+"&marka="+q.z.a.a+"&gosNomer="+q.x.a.a+"&tochka="+q.Q.a.a+"&photo=")),$async$oL)
 case 5:n=b
 l=n.b
 p=q.c
