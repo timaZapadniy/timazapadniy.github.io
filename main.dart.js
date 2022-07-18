@@ -20533,7 +20533,7 @@ acI:function acI(a){this.a=a},
 aik(a,b){var s=0,r=A.K(t.z),q,p,o,n,m
 var $async$aik=A.E(function(c,d){if(c===1)return A.H(d,r)
 while(true)switch(s){case 0:s=3
-return A.G(A.vD(A.hr("https://gzmk.ru/osno/apitest1.php?date="+new A.dq(Date.now(),!1).j(0)+"&method=userAuth&name="+a+"&pass="+b)),$async$aik)
+return A.G(A.vD(A.hr("https://gzmk.ru/osno/apitest.php?date="+new A.dq(Date.now(),!1).j(0)+"&method=userAuth&name="+a+"&pass="+b)),$async$aik)
 case 3:m=d
 if(m.b===200){p=m.e
 o=A.mU(A.mR(p).c.a.h(0,"charset"))
@@ -69159,7 +69159,7 @@ A.jE(new A.acj(),p,15,!0,o)
 m.a=""
 B.c.V(l,new A.ack(m))
 s=5
-return A.G(A.vD(A.hr("https://gzmk.ru/osno/apitest1.php?date="+new A.dq(Date.now(),!1).j(0)+"&name="+$.akm+"&method=checkpointIN&code="+A.e(q.f.a)+"&marka="+q.z.a.a+"&gosNomer="+q.x.a.a+"&tochka="+q.Q.a.a+"&photo="+m.a)),$async$oL)
+return A.G(A.vD(A.hr("https://gzmk.ru/osno/apitest.php?date="+new A.dq(Date.now(),!1).j(0)+"&name="+$.akm+"&method=checkpointIN&code="+A.e(q.f.a)+"&marka="+q.z.a.a+"&gosNomer="+q.x.a.a+"&tochka="+q.Q.a.a+"&photo="+m.a)),$async$oL)
 case 5:n=b
 l=n.b
 p=q.c
@@ -69238,7 +69238,7 @@ s=a!==p?2:3
 break
 case 2:k.f=a
 s=4
-return A.G(A.vD(A.hr("https://gzmk.ru/osno/apitest1.php?date="+new A.dq(Date.now(),!1).j(0)+"&method=getDocFromQR&code="+A.e(k.e.a))),$async$$1)
+return A.G(A.vD(A.hr("https://gzmk.ru/osno/apitest.php?date="+new A.dq(Date.now(),!1).j(0)+"&method=getDocFromQR&code="+A.e(k.e.a))),$async$$1)
 case 4:o=c
 if(o.b===200){p=o.e
 n=A.mU(A.mR(p).c.a.h(0,"charset"))
@@ -69484,7 +69484,7 @@ A.jE(new A.acL(),p,15,!0,o)
 m.a=""
 B.c.V(l,new A.acM(m))
 s=5
-return A.G(A.vD(A.hr("https://gzmk.ru/osno/apitest1.php?date="+new A.dq(Date.now(),!1).j(0)+"&name="+$.akm+"&method=checkpointOut&code="+A.e(q.f.a)+"&photo="+m.a)),$async$oM)
+return A.G(A.vD(A.hr("https://gzmk.ru/osno/apitest.php?date="+new A.dq(Date.now(),!1).j(0)+"&name="+$.akm+"&method=checkpointOut&code="+A.e(q.f.a)+"&photo="+m.a)),$async$oM)
 case 5:n=b
 l=n.b
 p=q.c
@@ -69555,7 +69555,7 @@ s=a!==p?2:3
 break
 case 2:k.f=a
 s=4
-return A.G(A.vD(A.hr("https://gzmk.ru/osno/apitest1.php?date="+new A.dq(Date.now(),!1).j(0)+"&method=getDocFromQR&code="+A.e(k.e.a))),$async$$1)
+return A.G(A.vD(A.hr("https://gzmk.ru/osno/apitest.php?date="+new A.dq(Date.now(),!1).j(0)+"&method=getDocFromQR&code="+A.e(k.e.a))),$async$$1)
 case 4:o=c
 if(o.b===200){p=o.e
 n=A.mU(A.mR(p).c.a.h(0,"charset"))
@@ -69711,7 +69711,7 @@ return A.G(p.rn(),$async$hw)
 case 3:s=4
 return A.G(p.rB(),$async$hw)
 case 4:s=5
-return A.G(A.vD(A.hr("https://gzmk.ru/osno/apitest1.php?method=getUsers")),$async$hw)
+return A.G(A.vD(A.hr("https://gzmk.ru/osno/apitest.php?method=getUsers")),$async$hw)
 case 5:o=b
 if(o.b===200){q=o
 s=1
@@ -69768,7 +69768,7 @@ A.a3W.prototype={
 hv(){var s=0,r=A.K(t.z),q,p
 var $async$hv=A.E(function(a,b){if(a===1)return A.H(b,r)
 while(true)switch(s){case 0:s=3
-return A.G(A.vD(A.hr("https://gzmk.ru/osno/apitest1.php?method=getDocsPropusk&name="+$.akm)),$async$hv)
+return A.G(A.vD(A.hr("https://gzmk.ru/osno/apitest.php?method=getDocsPropusk&name="+$.akm)),$async$hv)
 case 3:p=b
 if(p.b===200){q=p
 s=1
