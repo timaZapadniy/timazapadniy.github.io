@@ -69527,7 +69527,7 @@ A.oG.prototype={
 ae(){return new A.R1(B.e.dD($.bA),B.l)}}
 A.R1.prototype={
 J(a,b){var s=this,r=null,q=t.Zp,p=A.akM(b,q),o=A.Fn(r,A.aH("\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0438",r,r,r,r,r,r,r,r,r,r,r)),n=A.aH("\u0420\u0430\u0437\u043c\u0435\u0440 \u0448\u0440\u0438\u0444\u0442\u0430",r,r,r,r,r,r,r,A.bi(r,r,r,r,r,r,r,r,r,r,r,s.d,r,r,r,r,!0,r,r,r,r,r,r,r,r),r,r,r),m=s.d
-return A.KQ(o,new A.d5(B.bt,A.dc(A.b([n,new A.Ap(m,new A.agF(s),14,26,10,""+m,r),new A.aB(r,8,r,r),A.aH("\u0412\u0435\u0440\u0441\u0438\u044f 1.0.5",r,r,r,r,r,r,r,A.bi(r,r,r,r,r,r,r,r,r,r,r,m,r,r,r,r,!0,r,r,r,r,r,r,r,r),r,r,r),new A.oQ(r),A.akL(new A.agG(s,p),q,t.W4)],t.p),B.dK,B.v,B.w),r))}}
+return A.KQ(o,new A.d5(B.bt,A.dc(A.b([n,new A.Ap(m,new A.agF(s),14,26,10,""+m,r),new A.aB(r,8,r,r),A.aH("\u0412\u0435\u0440\u0441\u0438\u044f 1.0.6",r,r,r,r,r,r,r,A.bi(r,r,r,r,r,r,r,r,r,r,r,m,r,r,r,r,!0,r,r,r,r,r,r,r,r),r,r,r),new A.oQ(r),A.akL(new A.agG(s,p),q,t.W4)],t.p),B.dK,B.v,B.w),r))}}
 A.agF.prototype={
 $1(a){var s=this.a
 s.am(new A.agE(s,a))},
