@@ -1,4 +1,4 @@
-yandex.com, 107936378, DIRECT
+yandex.com, 306168123, DIRECT
 betweendigital.com, 43554, RESELLER
 openx.com, 541177349, RESELLER, 6a698e2ec38604c6
 pubmatic.com, 159668, RESELLER, 5d62403b186f2ace
