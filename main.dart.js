@@ -23377,7 +23377,7 @@ q=s[1]
 s=s[2]
 p=b[2]
 return A.b([o*m+l*k+j*n,o*r+l*q+j*s,o*p[0]+l*p[1]+j*p[2]],t.n)},
-ajT(){var s,r,q,p,o,n,m="144.31.198.54:443",l="https://144.31.198.54"
+ajT(){var s,r,q,p,o,n,m="144.31.198.54:8080",l="http://144.31.198.54:8080"
 try{s=A.m6(l)
 r=J.avU(s)
 if(J.d(r,-1))r=s.gn0()==="https"?443:80
@@ -23386,7 +23386,7 @@ o=A.n(r)
 return p+":"+o}catch(n){q=A.aA(n)
 A.aj8().$1("Failed to parse server URL: "+A.n(q))
 return m}},
-any(){return"wss://144.31.198.54"},
+any(){return"ws://144.31.198.54:8080"},
 ayG(a){var s,r=B.d.fW(a)
 if(r.length===0)return!1
 if(!B.d.bJ(r,"{")&&!B.d.bJ(r,"["))return!1
