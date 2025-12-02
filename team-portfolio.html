@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио Разработки</title>
+    <style>
+        :root {
+            /* Цветовая гамма с акцентом на зеленый (Vue.js стиль) */
+            --primary-color: #35495e;
+            --accent-color: #42b883; 
+            --bg-light: #f4f8f6;
+            --text-color: #2c3e50;
+            --white: #ffffff;
+            --border-color: #e2e8f0;
+            --card-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        /* Базовые стили */
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Навигация */
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            margin: 0;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero секция */
+        .hero {
+            background: linear-gradient(135deg, #35495e 0%, #41b883 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            margin: 0 0 10px 0;
+            font-size: 2.2rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px 40px 20px;
+        }
+
+        section {
+            margin-bottom: 70px;
+            scroll-margin-top: 90px;
+        }
+
+        h2 {
+            text-align: center;
+            color: var(--primary-color);
+            margin-bottom: 40px;
+            font-size: 2rem;
+            position: relative;
+        }
+        
+        h2::after {
+            content: "";
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: var(--accent-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        /* --- КЕЙСЫ (Grid) --- */
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 25px;
+        }
+
+        .case-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            box-shadow: var(--card-shadow);
+            border-top: 4px solid var(--accent-color);
+            transition: transform 0.2s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .case-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .case-title {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .case-desc {
+            font-size: 0.95rem;
+            color: #555;
+            margin-bottom: 15px;
+            flex-grow: 1;
+        }
+
+        .case-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: auto;
+        }
+
+        .tag {
+            background-color: #eefbf5;
+            color: #2c8c63;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* --- КОМПЕТЕНЦИИ --- */
+        .dev-card {
+            background: white;
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: var(--card-shadow);
+            border-left: 5px solid var(--primary-color);
+        }
+
+        .dev-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 15px;
+        }
+
+        .dev-header h3 {
+            margin: 0;
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+
+        .role-label {
+            background: #35495e;
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85rem;
+        }
+
+        .skills-list {
+            columns: 2;
+            column-gap: 40px;
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .skills-list li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+            break-inside: avoid;
+            font-size: 0.95rem;
+        }
+
+        .skills-list li::before {
+            content: "✔";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-size: 0.8rem;
+            top: 4px;
+        }
+
+        .skills-list strong {
+            color: #333;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px;
+            background-color: var(--primary-color);
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+
+        /* Адаптив */
+        @media (max-width: 768px) {
+            .nav-container {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .skills-list {
+                columns: 1;
+            }
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .cases-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav-container">
+        <div class="logo">DevPortfolio</div>
+        <nav>
+            <ul>
+                <li><a href="#cases">Кейсы</a></li>
+                <li><a href="#senior">Senior</a></li>
+                <li><a href="#php">Laravel</a></li>
+                <li><a href="#vue">Frontend (Vue)</a></li>
+                <li><a href="#mobile">Mobile</a></li>
+                <li><a href="#1c">1C</a></li>
+                <li><a href="#qa">QA</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="hero">
+    <h1>Комплексная Разработка Продуктов</h1>
+    <p>Создаем ERP-системы, B2B-порталы, программы лояльности и мобильные приложения с высокой вовлеченностью.</p>
+</div>
+
+<div class="container">
+
+    <section id="cases">
+        <h2>Реализованные Проекты</h2>
+        <div class="cases-grid">
+            
+            <div class="case-card">
+                <div class="case-title">Программа лояльности для EdTech</div>
+                <div class="case-desc">
+                    Разработка системы геймификации и начисления бонусов для крупной обучающей платформы. Реализация личного кабинета ученика с историей прогресса и магазином подарков.
+                </div>
+                <div class="case-tags">
+                    <span class="tag">Laravel</span>
+                    <span class="tag">Vue.js</span>
+                    <span class="tag">Gamification</span>
+                </div>
+            </div>
+
+            <div class="case-card">
+                <div class="case-title">B2B Лояльность (Группа заводов)</div>
+                <div class="case-desc">
+                    Система мотивации для корпоративных клиентов (дилеров). Расчет скидок в зависимости от объема выборки, интеграция с ERP заводов для подтверждения отгрузок.
+                </div>
+                <div class="case-tags">
+                    <span class="tag">Laravel</span>
+                    <span class="tag">1С:ERP</span>
+                    <span class="tag">Complex Logic</span>
+                </div>
+            </div>
+
+            <div class="case-card">
+                <div class="case-title">Личный кабинет дилера</div>
+                <div class="case-desc">
+                    Единый портал для партнеров группы заводов. Оформление оптовых заказов, просмотр остатков на складах в реальном времени, документооборот (счета, накладные).
+                </div>
+                <div class="case-tags">
+                    <span class="tag">Vue.js SPA</span>
+                    <span class="tag">API Integration</span>
+                    <span class="tag">1C</span>
+                </div>
+            </div>
+
+            <div class="case-card">
+                <div class="case-title">E-commerce Бренда</div>
+                <div class="case-desc">
+                    Интернет-магазин (сайт + мобильное приложение) для известного бренда. Синхронизация каталога, корзины и профиля пользователя между платформами.
+                </div>
+                <div class="case-tags">
+                    <span class="tag">Flutter</span>
+                    <span class="tag">Nuxt.js</span>
+                    <span class="tag">High Traffic</span>
+                </div>
+            </div>
+
+            <div class="case-card">
+                <div class="case-title">Детское игровое приложение</div>
+                <div class="case-desc">
+                    Мобильная игра-раскраска с аудиторией <strong>более 1 млн пользователей</strong>. Оптимизированная работа с графикой, оффлайн-режим, встроенные покупки.
+                </div>
+                <div class="case-tags">
+                    <span class="tag">Flutter Game</span>
+                    <span class="tag">Custom Painter</span>
+                    <span class="tag">1M+ Users</span>
+                </div>
+            </div>
+
+            <div class="case-card">
+                <div class="case-title">Складское приложение (WMS)</div>
+                <div class="case-desc">
+                    Мобильное приложение для сотрудников склада. Сканирование штрих-кодов, инвентаризация, приемка товара. Прямой обмен данными с 1С.
+                </div>
+                <div class="case-tags">
+                    <span class="tag">Flutter</span>
+                    <span class="tag">1С</span>
+                    <span class="tag">Automation</span>
+                </div>
+            </div>
+
+             <div class="case-card">
+                <div class="case-title">Система бронирования услуг</div>
+                <div class="case-desc">
+                    Сервис для записи клиентов в сеть сервисных центров. Календарь занятости мастеров, SMS-уведомления, интеграция с IP-телефонией.
+                </div>
+                <div class="case-tags">
+                    <span class="tag">Vue.js</span>
+                    <span class="tag">Laravel</span>
+                    <span class="tag">Booking</span>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section>
+        <h2>Компетенции Команды</h2>
+
+        <div id="senior" class="dev-card">
+            <div class="dev-header">
+                <h3>Senior Разработчики</h3>
+                <span class="role-label">Tech Lead / Architect</span>
+            </div>
+            <ul class="skills-list">
+                <li><strong>Проектирование систем:</strong> Разработка архитектуры для средних и крупных бизнес-проектов (монолит, сервисы).</li>
+                <li><strong>Code Review:</strong> Контроль качества кода, внедрение стандартов разработки в команде.</li>
+                <li><strong>Оптимизация БД:</strong> Анализ и ускорение медленных SQL-запросов, правильное индексирование.</li>
+                <li><strong>Безопасность:</strong> Защита данных пользователей, аудит на уязвимости (OWASP).</li>
+                <li><strong>Наставничество:</strong> Менторство Middle-разработчиков, помощь в решении сложных задач.</li>
+                <li><strong>Интеграции:</strong> Проектирование сложных связок между сайтом, 1С, CRM и мобильным приложением.</li>
+                <li><strong>CI/CD:</strong> Настройка автоматического деплоя (GitLab CI, GitHub Actions).</li>
+                <li><strong>Оценка задач:</strong> Декомпозиция проектов и точная оценка сроков реализации.</li>
+                <li><strong>Работа с требованиями:</strong> Перевод бизнес-задач на технический язык.</li>
+                <li><strong>Рефакторинг:</strong> Работа с legacy-кодом, безопасное обновление старых систем.</li>
+            </ul>
+        </div>
+
+        <div id="php" class="dev-card">
+            <div class="dev-header">
+                <h3>PHP Разработчики</h3>
+                <span class="role-label">Laravel / Backend</span>
+            </div>
+            <ul class="skills-list">
+                <li><strong>Laravel Framework:</strong> Уверенное владение (Eloquent, Middleware, Policies, Jobs).</li>
+                <li><strong>Разработка API:</strong> Создание REST API для фронтенда и мобильных приложений.</li>
+                <li><strong>Бизнес-логика:</strong> Реализация сложных сценариев (расчет скидок, корзины, статусы заказов).</li>
+                <li><strong>Интеграции:</strong> Подключение платежных систем (эквайринг), служб доставки (CDEK и др.).</li>
+                <li><strong>Базы данных:</strong> Проектирование структуры БД (MySQL/PostgreSQL), миграции, связи.</li>
+                <li><strong>Очереди:</strong> Работа с фоновыми задачами (Redis) для отправки почты и обработки файлов.</li>
+                <li><strong>Админ-панели:</strong> Создание удобных интерфейсов для менеджеров (Nova, Filament или кастомные).</li>
+                <li><strong>Импорт/Экспорт:</strong> Обработка больших прайс-листов (Excel, XML, CSV).</li>
+                <li><strong>Unit-тестирование:</strong> Написание базовых тестов для критического функционала.</li>
+                <li><strong>Docker:</strong> Умение развернуть окружение для разработки.</li>
+            </ul>
+        </div>
+
+        <div id="vue" class="dev-card" style="border-left-color: var(--accent-color);">
+            <div class="dev-header">
+                <h3>Frontend Разработчики</h3>
+                <span class="role-label" style="background: var(--accent-color);">Vue.js / Nuxt</span>
+            </div>
+            <ul class="skills-list">
+                <li><strong>Vue.js 3:</strong> Composition API, реактивность, компоненты.</li>
+                <li><strong>Nuxt.js:</strong> Разработка SSR приложений для лучшего SEO (интернет-магазины).</li>
+                <li><strong>State Management:</strong> Управление данными приложения через Pinia или Vuex.</li>
+                <li><strong>Верстка:</strong> Адаптивная, кроссбраузерная верстка (SCSS, Tailwind CSS).</li>
+                <li><strong>Работа с API:</strong> Взаимодействие с бэкендом (Axios, обработка ошибок, лоадеры).</li>
+                <li><strong>SPA Приложения:</strong> Разработка быстрых личных кабинетов без перезагрузки страниц.</li>
+                <li><strong>Формы:</strong> Валидация сложных форм (VeeValidate) и отправка файлов.</li>
+                <li><strong>Анимации:</strong> Базовые анимации интерфейса для улучшения UX.</li>
+                <li><strong>UI Киты:</strong> Использование готовых библиотек (Vuetify, Element Plus) или создание своих.</li>
+                <li><strong>Оптимизация:</strong> Ускорение загрузки скриптов и изображений.</li>
+            </ul>
+        </div>
+
+        <div id="mobile" class="dev-card">
+            <div class="dev-header">
+                <h3>Мобильный Разработчик</h3>
+                <span class="role-label">Flutter</span>
+            </div>
+            <ul class="skills-list">
+                <li><strong>Кросс-платформа:</strong> Приложения для iOS и Android на одной кодовой базе.</li>
+                <li><strong>Custom Paint:</strong> Работа с графикой и рисованием (опыт в игровых приложениях).</li>
+                <li><strong>Верстка UI:</strong> Точное следование макетам Figma, адаптивность под разные экраны.</li>
+                <li><strong>Управление состоянием:</strong> Использование BLoC или Provider.</li>
+                <li><strong>Работа с API:</strong> Получение данных с сервера, кэширование, обработка ошибок сети.</li>
+                <li><strong>Локальные данные:</strong> Хранение настроек и данных оффлайн (Hive, Shared Preferences).</li>
+                <li><strong>Push-уведомления:</strong> Настройка Firebase Cloud Messaging.</li>
+                <li><strong>Публикация:</strong> Опыт выкладки приложений в App Store и Google Play.</li>
+                <li><strong>WebView:</strong> Интеграция веб-страниц внутрь приложения при необходимости.</li>
+                <li><strong>Нативные функции:</strong> Работа с камерой, галереей и разрешениями устройства.</li>
+            </ul>
+        </div>
+
+        <div id="1c" class="dev-card">
+            <div class="dev-header">
+                <h3>1С Разработчики</h3>
+                <span class="role-label">Automation</span>
+            </div>
+            <ul class="skills-list">
+                <li><strong>Типовые конфигурации:</strong> Доработка УТ 11, БП, ERP, УНФ под нужды бизнеса.</li>
+                <li><strong>Обмены данными:</strong> Настройка HTTP-сервисов для связи с сайтом и мобильным приложением.</li>
+                <li><strong>Расширения:</strong> Внесение изменений без снятия конфигурации с поддержки.</li>
+                <li><strong>Печатные формы:</strong> Создание кастомных счетов, накладных, актов.</li>
+                <li><strong>Отчеты:</strong> Разработка отчетов на СКД для руководства и менеджеров.</li>
+                <li><strong>Интеграция с маркетплейсами:</strong> API Wildberries, Ozon (заказы, остатки).</li>
+                <li><strong>Торговое оборудование:</strong> Подключение касс и сканеров.</li>
+                <li><strong>Права доступа:</strong> Настройка ролей и ограничений доступа (RLS).</li>
+                <li><strong>Обновление:</strong> Поддержание актуальности версий платформы и конфигураций.</li>
+                <li><strong>Консультация:</strong> Помощь пользователям в работе с программой.</li>
+            </ul>
+        </div>
+
+        <div id="qa" class="dev-card">
+            <div class="dev-header">
+                <h3>QA Инженер</h3>
+                <span class="role-label">Manual / Automation Base</span>
+            </div>
+            <ul class="skills-list">
+                <li><strong>Ручное тестирование:</strong> Функциональное тестирование веб и мобильных приложений.</li>
+                <li><strong>Тест-кейсы:</strong> Составление планов проверок и чек-листов.</li>
+                <li><strong>Регрессия:</strong> Проверка старого функционала перед релизом.</li>
+                <li><strong>API Тестирование:</strong> Проверка запросов через Postman/Insomnia.</li>
+                <li><strong>Баг-репорты:</strong> Понятное описание ошибок в Jira/YouTrack со скриншотами.</li>
+                <li><strong>Кросс-браузерность:</strong> Проверка верстки в разных браузерах и на мобильных устройствах.</li>
+                <li><strong>DevTools:</strong> Использование инструментов разработчика для локализации ошибок.</li>
+                <li><strong>Автотесты (Base):</strong> Написание простых автотестов для критических сценариев.</li>
+                <li><strong>Работа с БД:</strong> Проверка данных в базе через SQL-запросы.</li>
+                <li><strong>UX-тестирование:</strong> Оценка удобства интерфейса с точки зрения пользователя.</li>
+            </ul>
+        </div>
+
+    </section>
+</div>
+
+<footer>
+    
+</footer>
+
+</body>
+</html>
